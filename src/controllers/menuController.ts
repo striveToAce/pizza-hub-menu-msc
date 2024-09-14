@@ -47,7 +47,9 @@ export const createMenuItem = async (req: Request, res: Response) => {
 // Get all menu items
 export const getMenuItems = async (req: Request, res: Response) => {
   try {
-    const menuItems = await getMenuItemsService();
+    const type = req.params.type;
+    const itemType = type === "pizza" ? MenuItemType.PIZZA : MenuItemType.SODA;
+    const menuItems = await getMenuItemsService(itemType);
     return res.status(200).json(menuItems);
   } catch (error) {
     return res.status(500).json({ error: "Error fetching menu items" });

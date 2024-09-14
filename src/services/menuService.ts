@@ -11,10 +11,13 @@ export const createMenuItemService = async (data: { name: string; description?: 
 };
 
 // Get all menu items
-export const getMenuItemsService = async () => {
-  return await prisma.menuItem.findMany();
+export const getMenuItemsService = async (type: MenuItemType) => {
+  return await prisma.menuItem.findMany({
+    where: {
+      type,
+    },
+  });
 };
-
 // Update a menu item
 export const updateMenuItemService = async (id: string, data: { name?: string; description?: string; price?: number; size?: MenuItemSize; type?: MenuItemType }) => {
   return await prisma.menuItem.update({
