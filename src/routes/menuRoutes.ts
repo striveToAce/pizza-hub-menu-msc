@@ -7,7 +7,7 @@ const router = Router();
 router.post('/', createMenuItem);
 
 // Get all menu items
-router.get('/get-items/:type', getMenuItems);
+router.get('/get-items', getMenuItems);
 
 // Update a menu item by ID
 router.put('/item-details/:id', updateMenuItem);
