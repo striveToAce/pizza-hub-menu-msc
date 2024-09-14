@@ -8,6 +8,6 @@ const app = express();
 app.use(express.json());
 
 // Register routes
-app.use('/api/menu', menuRoutes);
+app.use('/api/pizza-fusion/menu', menuRoutes);
 
 export default app;

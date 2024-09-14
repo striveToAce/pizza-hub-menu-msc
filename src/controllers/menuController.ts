@@ -34,7 +34,7 @@ export const createMenuItem = async (req: Request, res: Response) => {
     const menuItem = await createMenuItemService({
       name,
       description,
-      price,
+      price: parseFloat(price),
       size,
       type,
     });
