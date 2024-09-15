@@ -10,7 +10,7 @@ router.post('/', createMenuItem);
 router.get('/get-items', getMenuItems);
 
 // Update a menu item by ID
-router.put('/item-details/:id', updateMenuItem);
+router.put('/update-item/:id', updateMenuItem);
 
 // Delete a menu item by ID
 router.delete('/remove-item/:id', deleteMenuItem);

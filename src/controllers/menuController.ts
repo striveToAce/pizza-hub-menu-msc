@@ -10,6 +10,7 @@ import { MenuItemSize, MenuItemType } from "../types/menu";
 
 // Joi schema for validating menu items
 const menuItemSchema = Joi.object({
+  id:Joi.string().optional(),
   name: Joi.string().required(),
   description: Joi.string().optional(),
   price: Joi.number().positive().required(),

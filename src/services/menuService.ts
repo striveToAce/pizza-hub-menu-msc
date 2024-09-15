@@ -16,6 +16,9 @@ export const getMenuItemsService = async (type: MenuItemType) => {
     where: {
       type,
     },
+    orderBy: {
+      createdAt: 'desc', // Sort by createdAt from latest to oldest
+    },
   });
 };
 // Update a menu item
