@@ -99,3 +99,13 @@ export const deleteMenuItem = async (req: Request, res: Response) => {
     return res.status(500).json({ error: "Error deleting menu item" });
   }
 };
+
+export const checkHealth = async (req: Request, res: Response) => {
+  try {
+    res.status(200).json({
+      "message":"menu service working fine"
+    });
+  } catch (error) {
+    res.status(500).json({ error: "menu service not working" });
+  }
+};

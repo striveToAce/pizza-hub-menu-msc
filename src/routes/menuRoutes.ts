@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { createMenuItem, getMenuItems, updateMenuItem, deleteMenuItem } from '../controllers/menuController';
+import { createMenuItem, getMenuItems, updateMenuItem, deleteMenuItem, checkHealth } from '../controllers/menuController';
 
 const router = Router();
 
@@ -14,5 +14,8 @@ router.put('/update-item/:id', updateMenuItem);
 
 // Delete a menu item by ID
 router.delete('/remove-item/:id', deleteMenuItem);
+
+// check health
+router.get('/health', checkHealth);
 
 export default router;
