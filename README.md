@@ -118,6 +118,7 @@ This service manages the menu items (Pizza and Soda) for the Pizza Fusion applic
    ```env
    DATABASE_URL=your_database_url
    ```
+   **DOCKER IMAGE (ALREADY HAVE ENV INCLUDED)**
 
 4. **Run Prisma migrations**:
    ```bash
